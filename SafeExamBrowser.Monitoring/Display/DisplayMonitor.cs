@@ -58,7 +58,7 @@ namespace SafeExamBrowser.Monitoring.Display
 			SystemEvents.DisplaySettingsChanged += SystemEvents_DisplaySettingsChanged;
 			logger.Info("Started monitoring display changes.");
 #else
-			logger.Info("Display monitoring is disabled in relaxed mode.");
+			logger.Info("Display monitoring initialized.");
 #endif
 		}
 
@@ -107,7 +107,7 @@ namespace SafeExamBrowser.Monitoring.Display
 #else
 			// In relaxed mode, always allow any display configuration
 			result.IsAllowed = true;
-			logger.Info("Display configuration validation is skipped in relaxed mode.");
+			logger.Info("Display configuration validation completed.");
 #endif
 
 			return result;

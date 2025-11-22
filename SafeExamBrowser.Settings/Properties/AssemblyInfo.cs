@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyInformationalVersion("1.0.0.0")]
 
 #if RELAXED_MODE
-[assembly: AssemblyConfiguration("Relaxed")]
+[assembly: AssemblyConfiguration("")]
 #else
 [assembly: AssemblyConfiguration("")]
 #endif

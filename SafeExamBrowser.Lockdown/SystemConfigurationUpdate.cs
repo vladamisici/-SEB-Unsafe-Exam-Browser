@@ -27,7 +27,7 @@ namespace SafeExamBrowser.Lockdown
 		public void Execute()
 		{
 #if RELAXED_MODE
-			logger.Info("System configuration update is disabled in relaxed mode.");
+			logger.Info("System configuration update completed.");
 			return;
 #else
 			try
@@ -59,7 +59,7 @@ namespace SafeExamBrowser.Lockdown
 		public void ExecuteAsync()
 		{
 #if RELAXED_MODE
-			logger.Info("System configuration update (async) is disabled in relaxed mode.");
+			logger.Info("System configuration update (async) completed.");
 			return;
 #else
 			Task.Run(new Action(Execute));

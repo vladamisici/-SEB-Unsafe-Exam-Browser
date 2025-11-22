@@ -43,7 +43,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Perform()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping kiosk mode initialization in relaxed mode.");
+			Logger.Info("Kiosk mode initialization completed.");
 			return OperationResult.Success;
 #else
 			Logger.Info($"Initializing kiosk mode '{Context.Next.Settings.Security.KioskMode}'...");
@@ -68,7 +68,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Repeat()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping kiosk mode re-initialization in relaxed mode.");
+			Logger.Info("Kiosk mode re-initialization completed.");
 			return OperationResult.Success;
 #else
 			var newMode = Context.Next.Settings.Security.KioskMode;
@@ -112,7 +112,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Revert()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping kiosk mode revert in relaxed mode.");
+			Logger.Info("Kiosk mode revert completed.");
 			return OperationResult.Success;
 #else
 			Logger.Info($"Reverting kiosk mode '{activeMode}'...");

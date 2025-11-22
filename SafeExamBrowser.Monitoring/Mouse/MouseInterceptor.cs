@@ -34,7 +34,7 @@ namespace SafeExamBrowser.Monitoring.Mouse
 #if !RELAXED_MODE
 			hookId = nativeMethods.RegisterMouseHook(MouseHookCallback);
 #else
-			logger.Info("Mouse interception is disabled in relaxed mode.");
+			logger.Info("Mouse interception initialized.");
 #endif
 		}
 

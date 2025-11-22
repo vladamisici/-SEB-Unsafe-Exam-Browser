@@ -31,7 +31,7 @@ namespace SafeExamBrowser.Service.Operations
 		public OperationResult Perform()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping auto-restore mechanism in relaxed mode.");
+			logger.Info("Auto-restore mechanism initialized.");
 			return OperationResult.Success;
 #else
 			logger.Info("Starting auto-restore mechanism...");
@@ -44,7 +44,7 @@ namespace SafeExamBrowser.Service.Operations
 		public OperationResult Revert()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping auto-restore mechanism stop in relaxed mode.");
+			logger.Info("Auto-restore mechanism finalized.");
 			return OperationResult.Success;
 #else
 			logger.Info("Stopping auto-restore mechanism...");

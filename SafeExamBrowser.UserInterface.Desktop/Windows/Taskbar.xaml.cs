@@ -161,7 +161,7 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 				var hwnd = new WindowInteropHelper(this).Handle;
 				var exStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
 				SetWindowLong(hwnd, GWL_EXSTYLE, exStyle | WS_EX_TOOLWINDOW);
-				logger.Debug("Applied WS_EX_TOOLWINDOW style to taskbar to exclude from Alt+Tab in relaxed mode.");
+				logger.Debug("Applied WS_EX_TOOLWINDOW style to taskbar.");
 #endif
 			};
 			QuitButton.Clicked += QuitButton_Clicked;

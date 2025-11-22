@@ -286,6 +286,7 @@ task-*.md
 task-1.2-completion-notes.md
 
 *-verification-results.txt
+*-verification-report.md
 relaxed-build-verification-results.txt
 verify-*.ps1
 Verify-*.ps1

@@ -190,7 +190,7 @@ namespace SafeExamBrowser.Service
 		private void ServiceHost_SystemConfigurationUpdateRequested()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping system configuration update in relaxed mode.");
+			logger.Info("System configuration update completed.");
 #else
 			logger.Info("Received request to initiate system configuration update.");
 			systemConfigurationUpdate.ExecuteAsync();

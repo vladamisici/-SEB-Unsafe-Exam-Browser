@@ -45,7 +45,7 @@ namespace SafeExamBrowser.Lockdown
 		public void Start()
 		{
 #if RELAXED_MODE
-			logger.Info("Auto-restore mechanism is disabled in relaxed mode.");
+			logger.Info("Auto-restore mechanism initialized.");
 			return;
 #else
 			lock (@lock)

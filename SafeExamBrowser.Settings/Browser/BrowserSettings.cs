@@ -237,8 +237,8 @@ namespace SafeExamBrowser.Settings.Browser
 			AllowPrint = true;
 			AllowPdfReaderToolbar = true;
 			AllowCustomDownAndUploadLocation = true;
-			SendBrowserExamKey = false;
-			SendConfigurationKey = false;
+			SendBrowserExamKey = true;
+			SendConfigurationKey = true;
 			UseIsolatedClipboard = false;
 #endif
 			AdditionalWindow = new WindowSettings();

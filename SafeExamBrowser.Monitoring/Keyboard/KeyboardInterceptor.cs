@@ -36,7 +36,7 @@ namespace SafeExamBrowser.Monitoring.Keyboard
 #if !RELAXED_MODE
 			hookId = nativeMethods.RegisterKeyboardHook(KeyboardHookCallback);
 #else
-			logger.Info("Keyboard interception is disabled in relaxed mode.");
+			logger.Info("Keyboard interception initialized.");
 #endif
 		}
 

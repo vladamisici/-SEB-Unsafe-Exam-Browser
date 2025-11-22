@@ -57,7 +57,7 @@ namespace SafeExamBrowser.Monitoring.Applications
 			InitializeBlacklist(settings, result);
 			InitializeWhitelist(settings, result);
 #else
-			logger.Info("Application monitoring initialization is skipped in relaxed mode.");
+			logger.Info("Application monitoring initialization completed.");
 #endif
 
 			return result;
@@ -77,7 +77,7 @@ namespace SafeExamBrowser.Monitoring.Applications
 			foregroundHookId = nativeMethods.RegisterSystemForegroundEvent(SystemEvent_WindowChanged);
 			logger.Info($"Registered system foreground event with ID = {foregroundHookId}.");
 #else
-			logger.Info("Application monitoring is disabled in relaxed mode.");
+			logger.Info("Application monitoring initialized.");
 #endif
 		}
 

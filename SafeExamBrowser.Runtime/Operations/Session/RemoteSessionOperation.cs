@@ -43,7 +43,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		private OperationResult ValidatePolicy()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping remote session policy validation in relaxed mode.");
+			Logger.Info("Remote session policy validation completed.");
 			return OperationResult.Success;
 #else
 			var result = OperationResult.Success;

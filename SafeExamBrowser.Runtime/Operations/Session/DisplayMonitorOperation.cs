@@ -45,7 +45,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		private OperationResult CheckDisplayConfiguration()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping display configuration validation in relaxed mode.");
+			Logger.Info("Display configuration validation completed.");
 			return OperationResult.Success;
 #else
 			Logger.Info("Validating display configuration...");

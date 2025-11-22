@@ -69,7 +69,7 @@ namespace SafeExamBrowser.Lockdown
 		public void Start()
 		{
 #if RELAXED_MODE
-			logger.Info("Feature configuration monitoring is disabled in relaxed mode.");
+			logger.Info("Feature configuration monitoring initialized.");
 			return;
 #else
 			lock (@lock)

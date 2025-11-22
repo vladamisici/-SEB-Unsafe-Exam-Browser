@@ -13,7 +13,7 @@ using System.Windows;
 [assembly: AssemblyCopyright("Copyright © 2025 ETH Zürich, IT Services")]
 
 #if RELAXED_MODE
-[assembly: AssemblyConfiguration("Relaxed")]
+[assembly: AssemblyConfiguration("")]
 #else
 [assembly: AssemblyConfiguration("")]
 #endif

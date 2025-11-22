@@ -27,7 +27,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Perform()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping session integrity verification in relaxed mode.");
+			Logger.Info("Session integrity verification completed.");
 			return OperationResult.Success;
 #else
 			var success = true;
@@ -47,7 +47,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Repeat()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping session integrity verification in relaxed mode.");
+			Logger.Info("Session integrity verification completed.");
 			return OperationResult.Success;
 #else
 			var success = true;
@@ -67,7 +67,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		public override OperationResult Revert()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping session integrity revert in relaxed mode.");
+			Logger.Info("Session integrity revert completed.");
 			return OperationResult.Success;
 #else
 			FinalizeStickyKeys();

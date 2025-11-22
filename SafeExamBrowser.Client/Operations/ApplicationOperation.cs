@@ -57,7 +57,7 @@ namespace SafeExamBrowser.Client.Operations
 		public override OperationResult Perform()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping application initialization and monitoring in relaxed mode.");
+			logger.Info("Application initialization completed.");
 			StatusChanged?.Invoke(TextKey.OperationStatus_InitializeApplications);
 			return OperationResult.Success;
 #else
@@ -78,7 +78,7 @@ namespace SafeExamBrowser.Client.Operations
 		public override OperationResult Revert()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping application finalization in relaxed mode.");
+			logger.Info("Application finalization completed.");
 			StatusChanged?.Invoke(TextKey.OperationStatus_FinalizeApplications);
 			return OperationResult.Success;
 #else

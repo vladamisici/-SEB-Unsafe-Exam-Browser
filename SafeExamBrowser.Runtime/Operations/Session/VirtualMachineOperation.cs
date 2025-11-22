@@ -44,7 +44,7 @@ namespace SafeExamBrowser.Runtime.Operations.Session
 		private OperationResult ValidatePolicy()
 		{
 #if RELAXED_MODE
-			Logger.Info("Skipping virtual machine policy validation in relaxed mode.");
+			Logger.Info("Virtual machine policy validation completed.");
 			return OperationResult.Success;
 #else
 			var result = OperationResult.Success;

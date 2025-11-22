@@ -30,7 +30,7 @@ namespace SafeExamBrowser.Client.Operations
 		public override OperationResult Perform()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping keyboard interception in relaxed mode.");
+			logger.Info("Keyboard interception initialized.");
 			StatusChanged?.Invoke(TextKey.OperationStatus_StartKeyboardInterception);
 			return OperationResult.Success;
 #else
@@ -46,7 +46,7 @@ namespace SafeExamBrowser.Client.Operations
 		public override OperationResult Revert()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping keyboard interception stop in relaxed mode.");
+			logger.Info("Keyboard interception finalized.");
 			StatusChanged?.Invoke(TextKey.OperationStatus_StopKeyboardInterception);
 			return OperationResult.Success;
 #else

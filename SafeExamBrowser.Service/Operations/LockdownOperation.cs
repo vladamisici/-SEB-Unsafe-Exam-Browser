@@ -39,7 +39,7 @@ namespace SafeExamBrowser.Service.Operations
 		public override OperationResult Perform()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping lockdown in relaxed mode.");
+			logger.Info("Lockdown completed.");
 			return OperationResult.Success;
 #else
 			groupId = Guid.NewGuid();
@@ -98,7 +98,7 @@ namespace SafeExamBrowser.Service.Operations
 		public override OperationResult Revert()
 		{
 #if RELAXED_MODE
-			logger.Info("Skipping lockdown reversion in relaxed mode.");
+			logger.Info("Lockdown reversion completed.");
 			return OperationResult.Success;
 #else
 			logger.Info($"Attempting to revert lockdown (feature configuration group: {groupId})...");

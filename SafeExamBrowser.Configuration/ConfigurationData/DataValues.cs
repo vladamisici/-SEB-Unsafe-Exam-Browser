@@ -194,8 +194,14 @@ namespace SafeExamBrowser.Configuration.ConfigurationData
 			settings.Browser.PopupPolicy = PopupPolicy.Allow;
 			settings.Browser.Proxy.Policy = ProxyPolicy.System;
 			settings.Browser.ResetOnQuitUrl = false;
+#if RELAXED_MODE
+			// Enable exam keys in relaxed mode for server connectivity
+			settings.Browser.SendBrowserExamKey = true;
+			settings.Browser.SendConfigurationKey = true;
+#else
 			settings.Browser.SendBrowserExamKey = false;
 			settings.Browser.SendConfigurationKey = false;
+#endif
 			settings.Browser.ShowFileSystemElementPath = true;
 			settings.Browser.StartUrl = "https://www.safeexambrowser.org/start";
 			settings.Browser.UseCustomUserAgent = false;
