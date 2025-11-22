@@ -285,12 +285,8 @@ task-*.md
 *-completion-notes.md
 task-1.2-completion-notes.md
 
-# Verification and test results
 *-verification-results.txt
 relaxed-build-verification-results.txt
 verify-*.ps1
 Verify-*.ps1
 
-# Build scripts (if you want to exclude custom build scripts)
-Build-*.ps1
-Get-*.ps1
