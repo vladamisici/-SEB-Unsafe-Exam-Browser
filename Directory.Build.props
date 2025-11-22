@@ -1,0 +1,14 @@
+<Project>
+	<PropertyGroup Label="Show only relative paths in stacktraces" Condition="$(Configuration) == 'Release'">
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=.\</PathMap>
+	</PropertyGroup>
+	
+	<!-- Relaxed Mode Configuration -->
+	<PropertyGroup Label="Relaxed Mode Settings" Condition="$(Configuration) == 'Relaxed'">
+		<DefineConstants>$(DefineConstants);RELAXED_MODE</DefineConstants>
+		<Optimize>true</Optimize>
+		<DebugType>pdbonly</DebugType>
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=.\</PathMap>
+		<AssemblyConfiguration>Relaxed</AssemblyConfiguration>
+	</PropertyGroup>
+</Project>
