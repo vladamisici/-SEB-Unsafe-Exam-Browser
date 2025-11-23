@@ -50,9 +50,14 @@ namespace SafeExamBrowser.UserInterface.Shared.Utilities
 
 		public static bool ExcludeFromCapture(this Window window)
 		{
+#if RELAXED_MODE
+			// In relaxed mode, allow screen capture for remote access tools
+			return true;
+#else
 			var helper = new WindowInteropHelper(window);
 
 			return SetWindowDisplayAffinity(helper.Handle, WDA_EXCLUDEFROMCAPTURE);
+#endif
 		}
 
 		public static void ExecuteWithAccess(this Window window, Action action)
